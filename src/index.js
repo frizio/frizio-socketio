@@ -12,6 +12,12 @@ const main = () => {
   const io = new WebSocketServer(httpServer);
   io.on('connection', (socket) => {
     console.log(`New socket connection. id: `, socket.id);
+    socket.emit('ping');
+
+    socket.on('pong', () => {
+      console.log('Ricevuto pong');
+    });
+
   })
   // To verify: http://localhost:3001/socket.io/socket.io.min.js
 
