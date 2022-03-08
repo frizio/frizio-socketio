@@ -10,8 +10,8 @@ const main = () => {
   console.log(`Server running on port ${PORT}`)
 
   const io = new WebSocketServer(httpServer);
-  io.on('connection', () => {
-    console.log('New socket connection');
+  io.on('connection', (socket) => {
+    console.log(`New socket connection. id: `, socket.id);
   })
   // To verify: http://localhost:3001/socket.io/socket.io.min.js
 
