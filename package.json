@@ -1,0 +1,23 @@
+{
+  "name": "frizio-socketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ -d dist/",
+    "start": "node dist/index.js",
+    "babe-node": "babel-node src/index.js",
+    "dev": "nodemon src/index.js --exec ./node_modules/.bin/babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@types/node": "^17.0.21",
+    "nodemon": "^2.0.15"
+  }
+}
