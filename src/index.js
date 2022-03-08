@@ -1,4 +1,9 @@
-import os from 'os';
+import hostname from "./app";
+import { PORT } from './config'
 
-const hostname = os.hostname();
-console.log('hostname: ' + hostname);
+const main = () => {
+  console.log('hostname: ' + hostname);
+  console.log(PORT);
+};
+
+main();

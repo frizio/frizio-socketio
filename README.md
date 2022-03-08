@@ -21,3 +21,18 @@ npm i -D nodemon
   "dev": "nodemon src/index.js --exec ./node_modules/.bin/babel-node"
 }
 ```
+
+## Install Dependencies
+
+```bash
+npm i dotenv
+```
+
+## Configure dotenv
+
+```js
+import { config } from "dotenv";
+config();
+
+export const PORT = process.env.PORT || 3000;
+```
