@@ -1,5 +1,6 @@
-import os from 'os';
+import express from "express";
+const app = express();
 
-const hostname = os.hostname();
+app.use(express.static(__dirname + "/public"));
 
-export default hostname;
+export default app;
