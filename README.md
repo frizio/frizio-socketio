@@ -36,3 +36,9 @@ config();
 
 export const PORT = process.env.PORT || 3000;
 ```
+
+## Install Dependencies
+
+```bash
+npm i express socket.io
+```
