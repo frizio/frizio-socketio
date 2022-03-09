@@ -18,6 +18,11 @@ const main = () => {
       console.log('Ricevuto pong');
     });
 
+    socket.on('client:newnote', (data) => {
+      console.log('Ricevuti dati');
+      console.log(data);
+    });
+
   })
   // To verify: http://localhost:3001/socket.io/socket.io.min.js
 

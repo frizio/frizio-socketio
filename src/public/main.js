@@ -19,7 +19,7 @@ noteForm.addEventListener("submit", event => {
     title: title.value,
     description: description.value
   };
-  console.log(note);
+  socket.emit('client:newnote', note);
 });
 
 // TODO Save a new Note
