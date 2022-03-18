@@ -2,11 +2,16 @@ console.log('Demo socket.io client');
 
 const socket = io();
 
+
+
+/*
 socket.on('ping', () => {
   console.log('Ricevuto ping');
   socket.emit('pong');
 });
+*/
 
+/*
 const noteForm = document.querySelector("#noteForm");
 
 const title = document.querySelector("#title");
@@ -21,5 +26,4 @@ noteForm.addEventListener("submit", event => {
   };
   socket.emit('client:newnote', note);
 });
-
-// TODO Save a new Note
+*/
