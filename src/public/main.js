@@ -2,7 +2,10 @@ console.log('Demo socket.io client');
 
 const socket = io();
 
-
+socket.on('server:loadnotes', (notes) => {
+  console.log('server:loadnotes Event' );
+  console.log(notes);
+});
 
 /*
 socket.on('ping', () => {

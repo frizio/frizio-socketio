@@ -1,13 +1,22 @@
+import Note from "./models/Note";
+
 export default (io) => {
 
   io.on("connection", (socket) => {
 
     console.log(`New socket connection. id: `, socket.id);
     
+    // Send all Notes to the client
+    const emitNotes = async () => {
+      const notes = await Note.find();
+      //console.log(notes);
+      socket.emit("server:loadnotes", notes);
+    };
+    emitNotes();
+    
   });
 
 };
-
 
 
 /*
