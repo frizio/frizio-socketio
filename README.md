@@ -1,8 +1,8 @@
 # Demo Babel, Express, Socketio, Mongoose
 
-## [Nodejs Socketio CRUD Video tutorial](https://www.youtube.com/watch?v=zWax5QCWCXM)
+## [Nodejs Socketio CRUD - Video tutorial](https://www.youtube.com/watch?v=zWax5QCWCXM)
 
-## [Socket.io Nodejs Mongodb CRUD | Aplicación en tiempo real con websockets](https://www.youtube.com/watch?v=MYqpw0P31ms)
+## [Socket.io Nodejs Mongodb CRUD | Aplicación en tiempo real con websockets - New Video tutorial](https://www.youtube.com/watch?v=MYqpw0P31ms)
 
 ## Install Dev Dependencies
 
@@ -15,10 +15,31 @@ npm i -D @babel/core @babel/node @babel/cli @babel/preset-env
 
 ```bash
 "scripts": {
-  "build": "babel src/ -d dist/",
+  "build": "babel src/ -d dist/ --copy-files",
   "start": "node dist/index.js",
   "babe-node": "babel-node src/index.js",
   "dev": "nodemon src/index.js --exec ./node_modules/.bin/babel-node"
+}
+```
+
+## Babel for production
+
+```bash
+npm i @babel/runtime
+npm i -D @babel/plugin-transform-runtime
+```
+
+```js
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime"
+  ],
+  "ignore": [
+    "src/public/**/*.js"
+  ]
 }
 ```
 
