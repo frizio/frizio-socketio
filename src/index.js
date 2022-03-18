@@ -3,9 +3,12 @@ import app from "./app";
 import { PORT } from './config'
 import { Server as WebSocketServer } from "socket.io";
 import sockets from "./sockets";
+import { connectDB } from "./db";
+
 
 const main = () => {
 
+  connectDB();
   const server = http.createServer(app);
   const httpServer = server.listen(PORT);
   console.log(`Server running on port ${PORT}`)
