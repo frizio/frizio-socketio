@@ -1,14 +1,14 @@
-# Demo Socketio, Express, Babel
-
-Use import / export instructions...
+# Demo Babel, Express, Socketio, Mongoose
 
 ## [Nodejs Socketio CRUD Video tutorial](https://www.youtube.com/watch?v=zWax5QCWCXM)
+
+## [Socket.io Nodejs Mongodb CRUD | Aplicación en tiempo real con websockets](https://www.youtube.com/watch?v=MYqpw0P31ms)
 
 ## Install Dev Dependencies
 
 ```bash
-npm i -D @babel/core @babel/node @babel/cli @babel/preset-env
 npm i -D nodemon
+npm i -D @babel/core @babel/node @babel/cli @babel/preset-env
 ```
 
 ## Scripts
@@ -22,13 +22,14 @@ npm i -D nodemon
 }
 ```
 
-## Install Dependencies
+## Install Dependencies 2
 
 ```bash
-npm i dotenv
+npm i dotenv express socket.io mongoose
+npm i -D @types/express @types/socket.io @types/mongoose
 ```
 
-## Configure dotenv
+## Configure dotenv (config.js)
 
 ```js
 import { config } from "dotenv";
@@ -37,8 +38,6 @@ config();
 export const PORT = process.env.PORT || 3000;
 ```
 
-## Install Dependencies 2
-
-```bash
-npm i express socket.io
+```js
+import { PORT } from './config'
 ```
