@@ -2,9 +2,12 @@ console.log('Demo socket.io client');
 
 const socket = io();
 
+const notesList = document.querySelector("#notes");
+
 socket.on('server:loadnotes', (notes) => {
   console.log('server:loadnotes Event' );
   console.log(notes);
+  notesList.append(notes);
 });
 
 /*
